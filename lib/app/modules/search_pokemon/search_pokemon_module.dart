@@ -1,11 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:tjms_app/app/modules/search_pokemon/interfaces/http_client/http_client.dart';
+import 'package:tjms_app/app/core/http_client/http_client.dart';
 import 'package:uno/uno.dart';
 
 import 'pages/search_pokemon_page.dart';
 import 'repositories/search_pokemon_repository_imp.dart';
-import 'services/http_client_dio_imp.dart';
+import '../../core/services/http_client_dio_imp.dart';
 
 class SearchPokemonModule extends Module {
   @override

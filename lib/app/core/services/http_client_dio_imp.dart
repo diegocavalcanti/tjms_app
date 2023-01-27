@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 
-import '../interfaces/http_client/http_client.dart';
-import '../interfaces/http_client/http_exception.dart';
-import '../interfaces/http_client/http_response.dart';
+import '../http_client/http_client.dart';
+import '../http_client/http_exception.dart';
+import '../http_client/http_response.dart';
 
 class HttpClientDioImp implements HttpClient {
   final Dio dio;
@@ -17,5 +17,16 @@ class HttpClientDioImp implements HttpClient {
     } on DioError catch (e) {
       throw HttpException(message: e.message, statusCode: e.response?.statusCode ?? 404);
     }
+  }
+  
+  @override
+  Future<HttpResponse> post(String url, {data}) async {
+     try {
+      final result = await dio.post(url, data: data);
+      return HttpResponse(data: result.data);
+    } on DioError catch (e) {
+      throw HttpException(message: e.message, statusCode: e.response?.statusCode ?? 404);
+    }
+  
   }
 }

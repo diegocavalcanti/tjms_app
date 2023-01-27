@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:tjms_app/app/modules/search_pokemon/errors/errors.dart';
 import 'package:tjms_app/app/modules/search_pokemon/pages/widgets/list_tile_personalizado.dart';
 
+import '../../../core/error/error_personalizado.dart';
 import '../interfaces/repositories/search_pokemon_repository.dart';
 import '../models/pokemon_model.dart';
 

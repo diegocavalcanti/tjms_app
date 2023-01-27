@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:tjms_app/app/modules/search_pokemon/errors/errors.dart';
-import 'package:tjms_app/app/modules/search_pokemon/interfaces/http_client/http_client.dart';
-import 'package:tjms_app/app/modules/search_pokemon/interfaces/http_client/http_exception.dart';
-import 'package:tjms_app/app/modules/search_pokemon/interfaces/http_client/http_response.dart';
+import 'package:tjms_app/app/core/http_client/http_client.dart';
+import 'package:tjms_app/app/core/http_client/http_exception.dart';
+import 'package:tjms_app/app/core/http_client/http_response.dart';
 import 'package:tjms_app/app/modules/search_pokemon/interfaces/repositories/search_pokemon_repository.dart';
 import 'package:tjms_app/app/modules/search_pokemon/models/pokemon_model.dart';
 import 'package:tjms_app/app/modules/search_pokemon/repositories/search_pokemon_repository_imp.dart';

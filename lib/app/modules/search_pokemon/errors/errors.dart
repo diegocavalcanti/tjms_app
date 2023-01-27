@@ -1,9 +1,4 @@
-abstract class ErroPersonalizado {
-  String get message;
-  final StackTrace? stackTrace;
-
-  const ErroPersonalizado({this.stackTrace});
-}
+import '../../../core/error/error_personalizado.dart';
 
 class ErroNameVazio extends ErroPersonalizado {
   @override

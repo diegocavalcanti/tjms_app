@@ -12,7 +12,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Projetos Flutter'),),
+      appBar: AppBar(
+        title: const Text('Projetos Flutter'),
+      ),
       body: Center(
         child: Column(
           children: [
@@ -20,6 +22,12 @@ class _HomePageState extends State<HomePage> {
               title: const Text('1. Como fazer uma requisição Http'),
               onTap: () {
                 Modular.to.pushNamed('search_pokemon/');
+              },
+            ),
+            ListTile(
+              title: const Text('2. Consumir Api Restfull'),
+              onTap: () {
+                Modular.to.pushNamed('users/');
               },
             ),
           ],

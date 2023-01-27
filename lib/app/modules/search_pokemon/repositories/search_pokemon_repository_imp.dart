@@ -1,8 +1,9 @@
 import 'package:either_dart/either.dart';
 
+import '../../../core/error/error_personalizado.dart';
 import '../errors/errors.dart';
-import '../interfaces/http_client/http_client.dart';
-import '../interfaces/http_client/http_exception.dart';
+import '../../../core/http_client/http_client.dart';
+import '../../../core/http_client/http_exception.dart';
 import '../interfaces/repositories/search_pokemon_repository.dart';
 import '../models/pokemon_model.dart';
 
@@ -12,7 +13,8 @@ class SearchPokemonRepositoryImp implements SearchPokemonRepository {
   SearchPokemonRepositoryImp(this.httpClient);
 
   @override
-  Future<Either<ErroPersonalizado, PokemonModel>> getPokemonByName({required String name}) async {
+  Future<Either<ErroPersonalizado, PokemonModel>> getPokemonByName(
+      {required String name}) async {
     if (name.isEmpty) {
       return const Left(ErroNameVazio());
     }
